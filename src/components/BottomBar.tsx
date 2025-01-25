@@ -4,7 +4,7 @@ import BottomArrowIcon from "../icons/BottomArrowIcon";
 
 const BottomBar = () => {
   return (
-    <div className="relative flex justify-around px-40 text-sm font-semibold md:px-8 md:text-[17px] lg:px-16 xl:px-32">
+    <div className="relative container mx-auto flex justify-around px-40 text-sm font-semibold md:px-8 md:text-[17px] lg:px-16 xl:px-32">
       {/* OBDeleven */}
       <div className="group py-2">
         <a

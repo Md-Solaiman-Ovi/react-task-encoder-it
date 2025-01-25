@@ -13,88 +13,90 @@ import LoginIcon from "../icons/LoginIcon";
 import MobileMenuIcon from "../icons/MobileMenuIcon";
 import BottomBar from "./BottomBar";
 
-const Navbar: React.FC = () => {
+const Navbar = React.forwardRef<HTMLDivElement>((props, ref) => {
   // State for Mobile Menu Toggle
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="text-[rgba(204,204,204,1)]">
+    <nav className="bg-[rgba(26,31,40,1)] text-[rgba(204,204,204,1)]" ref={ref}>
       {/* Top Bar */}
-      <div className="flex items-center justify-between border-b border-[rgba(37,49,70,1)] bg-[rgba(26,31,40,1)] px-4 py-[10px] text-sm md:px-8 lg:px-16 xl:px-32">
-        {/* Left: Navigation Links */}
-        <div className="hidden gap-[10px] text-sm md:flex">
-          <a
-            href="#"
-            className="font-semibold text-[rgba(234,76,73,1)] hover:text-[rgba(234,76,73,1)]"
-          >
-            Home
-          </a>
-          {"|"}
-          <a
-            href="#"
-            className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
-          >
-            About
-          </a>
-          {"|"}
-          <a
-            href="#"
-            className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
-          >
-            Blog
-          </a>
-          {"|"}
-          <a
-            href="#"
-            className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
-          >
-            Contact
-          </a>
-        </div>
+      <div className="border-b border-[rgba(37,49,70,1)] px-4 py-[10px] text-sm md:px-0">
+        <div className="container mx-auto flex items-center justify-between">
+          {/* Left: Navigation Links */}
+          <div className="hidden gap-[10px] text-sm md:flex">
+            <a
+              href="#"
+              className="font-semibold text-[rgba(234,76,73,1)] hover:text-[rgba(234,76,73,1)]"
+            >
+              Home
+            </a>
+            {"|"}
+            <a
+              href="#"
+              className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
+            >
+              About
+            </a>
+            {"|"}
+            <a
+              href="#"
+              className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
+            >
+              Blog
+            </a>
+            {"|"}
+            <a
+              href="#"
+              className="text-[rgba(204,204,204,1)] hover:text-[rgba(234,76,73,1)]"
+            >
+              Contact
+            </a>
+          </div>
 
-        {/* Right: Contact Email & Social Media */}
-        <div className="flex w-full items-center justify-between gap-4 text-[rgba(115,127,150,1)] md:w-auto">
-          <a
-            href="mailto:contact@abc.com"
-            className="flex items-center gap-2 hover:underline"
-          >
-            <EmailIcon />
-            <div className="text-[rgba(204,204,204,1)]">contact@abc.com</div>
-          </a>
-          {"|"}
-          <div className="flex items-center space-x-4">
+          {/* Right: Contact Email & Social Media */}
+          <div className="flex w-full items-center justify-between gap-4 text-[rgba(115,127,150,1)] md:w-auto">
             <a
-              href="#"
-              className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
+              href="mailto:contact@abc.com"
+              className="flex items-center gap-2 hover:underline"
             >
-              <FbIcon />
+              <EmailIcon />
+              <div className="text-[rgba(204,204,204,1)]">contact@abc.com</div>
             </a>
-            <a
-              href="#"
-              className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
-            >
-              <TwitterIcon />
-            </a>
-            <a
-              href="#"
-              className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
-            >
-              <InstaIcon />
-            </a>
-            <a
-              href="#"
-              className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
-            >
-              <YouTubeIcon />
-            </a>
+            <p className="hidden md:block">{"|"}</p>
+            <div className="flex items-center space-x-4">
+              <a
+                href="#"
+                className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
+              >
+                <FbIcon />
+              </a>
+              <a
+                href="#"
+                className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
+              >
+                <TwitterIcon />
+              </a>
+              <a
+                href="#"
+                className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
+              >
+                <InstaIcon />
+              </a>
+              <a
+                href="#"
+                className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
+              >
+                <YouTubeIcon />
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Bar */}
-      <div className="flex items-center justify-between bg-[rgba(26,31,40,1)] px-4 py-3 md:px-8 md:py-4 lg:px-16 xl:px-32">
-        <div className="flex w-3/4 items-center justify-between md:gap-x-4 xl:gap-x-12">
-          <div className="flex items-center gap-5 md:gap-0">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3 md:px-0 md:py-4">
+        <div className="flex w-3/4 items-center justify-between gap-x-0 xl:gap-x-12">
+          <div className="flex items-center gap-2 md:gap-0 lg:gap-5">
             {/* Mobile Menu Toggle */}
             <div className="flex cursor-pointer md:hidden">
               <button
@@ -161,7 +163,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Bottom Bar  */}
-      <div className="hidden bg-[rgba(31,36,45,1)] px-4 md:px-8 lg:block lg:px-16 xl:px-32">
+      <div className="hidden w-full bg-[rgba(31,36,45,1)] px-4 lg:block">
         {/* Bottom Menu with Dropdowns */}
         <BottomBar />
       </div>
@@ -215,6 +217,6 @@ const Navbar: React.FC = () => {
       ></div>
     </nav>
   );
-};
+});
 
 export default Navbar;
