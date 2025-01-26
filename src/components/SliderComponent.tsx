@@ -49,7 +49,7 @@ const SliderComponent: React.FC = () => {
     prevArrow: <LeftArrowCircleIcon />,
   };
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto px-4 py-10">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div className="flex items-center justify-center" key={index}>

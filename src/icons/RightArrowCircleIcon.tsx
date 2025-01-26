@@ -5,7 +5,7 @@ const RightArrowCircleIcon = (props: any) => {
   return (
     <div
       onClick={onClick}
-      className="absolute top-1/2 -right-14 cursor-pointer"
+      className="absolute top-1/2 -right-14 hidden cursor-pointer md:block"
     >
       <svg
         width="40"

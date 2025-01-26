@@ -3,7 +3,10 @@ import React from "react";
 const LeftArrowCircleIcon = (props: any) => {
   const { onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-1/2 -left-14 cursor-pointer">
+    <div
+      onClick={onClick}
+      className="absolute top-1/2 -left-14 hidden cursor-pointer md:block"
+    >
       <svg
         className="rotate-180"
         width="40"

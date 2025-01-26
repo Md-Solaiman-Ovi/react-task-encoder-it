@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const navbarRef = useRef<HTMLDivElement | null>(null); // Ref for Navbar
 
   return (
-    <div className="poppins-regular hide-scrollbar flex w-full flex-col bg-[rgba(26,31,40,1)]">
+    <div className="poppins-regular hide-scrollbar flex w-full flex-col overflow-x-hidden bg-[rgba(26,31,40,1)]">
       <Navbar ref={navbarRef} />
       <HeroSection navbarRef={navbarRef} />
       <ToolsAndScanner />
