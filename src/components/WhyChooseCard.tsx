@@ -6,12 +6,12 @@ interface WhyChooseCardProps {
   numberIcon: ReactElement;
   desc: string;
 }
-const WhyChooseCard = ({
+const WhyChooseCard: React.FC<WhyChooseCardProps> = ({
   serviceIcon,
   title,
   numberIcon,
   desc,
-}: WhyChooseCardProps) => {
+}) => {
   return (
     <div className="flex flex-col gap-5">
       <div className="flex items-center gap-[30px]">
@@ -20,7 +20,7 @@ const WhyChooseCard = ({
       </div>
       <div className="flex gap-5">
         <div>{numberIcon}</div>
-        <div className="text-sm font-normal text-[rgba(204,204,204,1)]">
+        <div className="px-8 text-sm font-normal text-[rgba(204,204,204,1)]">
           {desc}
         </div>
       </div>

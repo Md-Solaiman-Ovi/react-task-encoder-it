@@ -5,15 +5,15 @@ import YouTubeIcon from "../icons/YouTubeIcon";
 import EmailIcon from "../icons/EmailIcon";
 import PaymentImage from "./PaymentImage";
 import LogoIcon from "../icons/LogoIcon";
-const Footer = () => {
+import PaymentIcons from "../icons/PaymentIcons";
+
+const Footer: React.FC = () => {
   return (
     <div className="w-full bg-[url(../assets/footer-bg1.png)] bg-cover bg-no-repeat">
-      {" "}
-      <div className="flex flex-col items-center gap-10 bg-[rgba(29,35,45,0.6)] px-4 md:px-0">
-        <div className="container flex flex-col justify-around gap-24 py-10 text-sm font-normal text-white md:flex-row">
+      <div className="flex flex-col items-center bg-[rgba(29,35,45,0.6)] px-4 md:px-0">
+        <div className="container mx-auto flex flex-col justify-around gap-8 py-10 text-sm font-normal text-white md:flex-row lg:gap-16 xl:gap-24">
           <div className="flex w-full flex-col gap-6">
             <div className="font-family-forte text-[30px]">
-              {" "}
               <LogoIcon />
             </div>
             <div className="text-sm leading-6">
@@ -21,8 +21,8 @@ const Footer = () => {
               Limited time offer for only new customer also get free shipping on
               orders.
             </div>
-            <div className="flex items-center gap-2 pt-4 pb-4 text-white md:w-1/2 md:pb-10">
-              <div className="flex items-center space-x-4">
+            <div className="flex w-1/3 items-center gap-2 pt-4 pb-4 text-white md:w-2/3 md:pb-10">
+              <div className="flex w-full items-center justify-between space-x-4">
                 <a
                   href="#"
                   className="text-[rgba(115,127,150,1)] hover:text-[rgba(234,76,73,1)]"
@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex w-full flex-col gap-4">
-            <div className="text-[21px] font-bold text-white">Locate Us:</div>
+            <div className="text-[21px] font-bold text-white">OUR COMPANY</div>
             <div className="flex flex-col gap-4">
               <a
                 href="#"
@@ -92,9 +92,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex w-full flex-col gap-4">
-            <div className="text-[21px] font-bold text-white">
-              Get to Know Us:
-            </div>
+            <div className="text-[21px] font-bold text-white">OUR SERVICES</div>
             <div className="flex flex-col gap-4">
               <a
                 href="#"
@@ -135,7 +133,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex w-full flex-col gap-4">
-            <div className="text-[21px] font-bold text-white">Help Zone:</div>
+            <div className="text-[21px] font-bold text-white">CONTACT US</div>
             <div className="flex flex-col gap-4">
               <div>
                 <span className="text-[rgba(234,76,73,1)]">Address :</span> 126
@@ -156,18 +154,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* <div className="container flex flex-col-reverse gap-4 md:flex-row lg:gap-24">
-          <div className="flex w-full flex-col-reverse justify-between md:flex-col"></div>
-        </div> */}
-
-        <div className="container mx-auto flex w-full flex-col items-center justify-between border-t border-gray-500 py-5 text-white md:flex-row md:items-start">
-          <div className="w-full"> &copy; E-commerce. All Rights Reserved</div>
-          <div className="flex w-full gap-4">
-            <PaymentImage imageSource="/images/Rectangle66.png" width={40} />
-            <PaymentImage imageSource="/images/Rectangle67.png" width={40} />
-            <PaymentImage imageSource="/images/Rectangle68.png" width={40} />
-            <PaymentImage imageSource="/images/Rectangle69.png" width={40} />
-            <PaymentImage imageSource="/images/Rectangle70.png" width={40} />
+        <div className="w-full border-t border-[rgba(19,39,58,1)]">
+          <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-2 py-5 text-white md:flex-row md:items-start md:justify-between">
+            <div className="w-full text-center text-[11px] font-normal md:text-start md:text-[15px]">
+              Copyright © 2024{" "}
+              <span className="text-[rgba(234,76,73,1)]">abc</span> - All Rights
+              Reserved.
+            </div>
+            <div className="flex w-full justify-center gap-4 md:justify-end">
+              <PaymentIcons />
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import EuroIcon from "../icons/EuroIcon";
 
-const ToolsAndScanner = () => {
+const ToolsAndScanner: React.FC = () => {
   return (
     <div className="container mx-auto flex flex-col">
       <div className="flex flex-col justify-center gap-1 py-12">
@@ -14,7 +14,11 @@ const ToolsAndScanner = () => {
       </div>
       <div className="flex flex-col items-center gap-12 px-4 pb-20 md:flex-row md:px-0">
         <div className="flex h-full w-full justify-center lg:w-1/2">
-          <img src="/assets/toolsImg.png" alt="" className="" />
+          <img
+            src="/assets/toolsImg.png"
+            alt="Car Diagnostic Tools"
+            className=""
+          />
         </div>
         <div className="flex w-full flex-col gap-5 px-9 md:px-0 lg:w-1/2">
           <div className="flex items-center gap-2">

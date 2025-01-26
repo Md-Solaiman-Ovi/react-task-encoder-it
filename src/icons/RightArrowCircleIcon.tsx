@@ -1,8 +1,12 @@
 import React from "react";
 
-const RightArrowCircleIcon = () => {
+const RightArrowCircleIcon = (props: any) => {
+  const { className, style, onClick } = props;
   return (
-    <div>
+    <div
+      onClick={onClick}
+      className="absolute top-1/2 -right-14 cursor-pointer"
+    >
       <svg
         width="40"
         height="41"

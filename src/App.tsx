@@ -5,18 +5,20 @@ import Navbar from "./components/Navbar";
 import ToolsAndScanner from "./components/ToolsAndScanner";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Footer from "./components/Footer";
+import CustomerReviews from "./components/CustomerReviews";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 const App: React.FC = () => {
   const navbarRef = useRef<HTMLDivElement | null>(null); // Ref for Navbar
 
   return (
-    <div className="w-full bg-[rgba(26,31,40,1)]">
-      {/* Pass the ref to Navbar */}
+    <div className="poppins-regular hide-scrollbar flex w-full flex-col bg-[rgba(26,31,40,1)]">
       <Navbar ref={navbarRef} />
-      {/* Pass the same ref to HeroSection for height adjustment */}
       <HeroSection navbarRef={navbarRef} />
       <ToolsAndScanner />
       <WhyChooseUs />
+      <FeaturedProducts />
+      <CustomerReviews />
       <Footer />
     </div>
   );

@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from "react";
-import Slider from "./Slider";
 import DeliveryIcon from "../icons/DeliveryIcon";
 import FiveStarIcon from "../icons/FiveStarIcon";
 import TimerIcon from "../icons/TimerIcon";
 import CircleTickIcon from "../icons/CircleTickIcon";
+import SliderComponent from "./SliderComponent";
 
 interface HeroSectionProps {
-  navbarRef: React.RefObject<HTMLDivElement>; // Receive navbarRef as a prop
+  navbarRef: React.RefObject<HTMLDivElement>;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ navbarRef }) => {
-  const [heroHeight, setHeroHeight] = useState<string>("100vh"); // State for hero height
+  const [heroHeight, setHeroHeight] = useState<string>("100vh");
 
   useEffect(() => {
     const updateHeroHeight = () => {
       if (navbarRef.current) {
-        const navbarHeight = navbarRef.current.offsetHeight; // Get navbar height
-        setHeroHeight(`calc(100vh - ${navbarHeight}px)`); // Set height
+        const navbarHeight = navbarRef.current.offsetHeight;
+        if (window.innerWidth >= 1024) {
+          // Check for large screen (>=1024px)
+          setHeroHeight(`calc(100vh - ${navbarHeight}px)`);
+        } else {
+          // For small screens, set height to auto
+          setHeroHeight("auto");
+        }
       }
     };
 
@@ -30,9 +36,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ navbarRef }) => {
 
   return (
     <div
-      className="h-1/2 w-full bg-[url(./assets/bgImg2.jpg)] bg-cover bg-no-repeat md:h-full"
+      className="h-auto w-full bg-[url(./assets/bgImg2.jpg)] bg-cover bg-no-repeat md:h-full"
       style={{
-        height: heroHeight, // Dynamically calculated height
+        height: heroHeight, // Dynamically set height based on screen size
       }}
     >
       <div className="relative h-full w-full bg-[rgba(17,24,34,0.6)] text-white">
@@ -65,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ navbarRef }) => {
             </div>
           </div>
         </div>
-        <Slider />
+        <SliderComponent />
       </div>
     </div>
   );
