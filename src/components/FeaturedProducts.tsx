@@ -122,7 +122,7 @@ const FeaturedProducts: React.FC = () => {
             FEATURED PRODUCTS
           </h2>
           <div className="relative flex flex-col items-center justify-between md:flex-row">
-            <div className="hide-scrollbar mb-6 flex items-center gap-1 overflow-x-scroll scroll-smooth md:overflow-hidden">
+            <div className="hide-scrollbar mb-6 flex items-center gap-1 overflow-x-scroll scroll-smooth px-4 md:overflow-hidden">
               {tabs.map((tab) => (
                 <button
                   key={tab}
