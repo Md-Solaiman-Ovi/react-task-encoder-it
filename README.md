@@ -38,12 +38,6 @@ Start the React development server by running:
 pnpm run dev
 ```
 This will open the project in your default web browser at `http://localhost:3000`.
-
-### 5. View Live Changes
-
-- Open the project files in VS Code.
-- Make changes to the code (e.g., in the `src` folder).
-- The browser will automatically refresh to reflect your changes.
   
 ### 5. Live Preview Link
 - https://react-task-encoder-it.vercel.app/
