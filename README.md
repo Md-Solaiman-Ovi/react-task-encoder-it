@@ -11,7 +11,7 @@
   
 4. Clone the repository using Git:
    ```bash
-   git clone git@github.com:Md-Solaiman-Ovi/softnio-assignment-react-version.git
+   git clone git@github.com:Md-Solaiman-Ovi/react-task-encoder-it.git
    ```
    
 
@@ -19,7 +19,7 @@
 
 Move into the cloned project folder:
 ```bash
-cd softnio-assignment-react-version
+cd react-task-encoder-it
 ```
 
 
